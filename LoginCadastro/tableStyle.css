@@ -1,0 +1,30 @@
+.div-tabela {
+    margin: 0 auto;
+    width: 200px;
+    margin-top: 10%;
+    border-collapse: collapse;
+
+}
+
+caption {
+    font-style: italic;
+}
+
+td {
+    padding: 10px;
+}
+
+thead tr {
+    border-bottom: solid 3px #444;
+}
+
+thead tr td {
+    font-weight: bold;
+    font-size: large;
+    padding: 10px;
+}
+
+
+tbody tr:hover {
+    background-color: #dedede;
+}
