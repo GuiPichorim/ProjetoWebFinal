@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="PaginaCadastroJS.js"></script>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    <div>
+        <div class="div-login">
+            <h1>Cadastro</h1>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="nome">
+                <label class="mdl-textfield__label" id="labelNome">Nome</label>
+            </div>
+            <br>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="sobrenome">
+                <label class="mdl-textfield__label" id="labelSobrenome">Sobrenome</label>
+            </div>
+            <br>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="email">
+                <label class="mdl-textfield__label" id="labelEmail">E-mail</label>
+            </div>
+            <br>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="nomeUsuario">
+                <label class="mdl-textfield__label" id="labelUsuario">Nome de usuário</label>
+            </div>
+            <br>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="password" id="senha">
+                <label class="mdl-textfield__label" id="labelSenha">Senha</label>
+            </div>
+            <br>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="password" id="confirmarSenha">
+                <label class="mdl-textfield__label" id="labelConfSenha">Confirmar senha</label>
+            </div>
+            <br>
+            <button class="mdl-button mdl-js-button mdl-button--raised formulario-button" id="bCriar">
+                Criar
+            </button>
+            <button class="mdl-button mdl-js-button mdl-button--raised formulario-button" id="bVoltaPg">
+                Logar
+            </button>
+            <button class="mdl-button mdl-js-button mdl-button--raised formulario-button" id="bLocalStorage">
+                LocalStorage
+            </button>
+        </div>
+    </div>
+</body>
+</html>
