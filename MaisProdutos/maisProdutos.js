@@ -20,6 +20,9 @@ var contador = 0 // verificar
 
 
 $(document).ready(function() {
+    $("#bLogin").click(function() {
+        window.location.href = "../LoginCadastro/index.html"
+    })
 
     $('#pagCarrinho').click(function () {
         window.location.href = "../PagCarrinho/pagCarrinho.html";

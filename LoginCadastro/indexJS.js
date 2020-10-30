@@ -1,4 +1,8 @@
 $(document).ready(function(){
+    $("#bCarrinho").click(function() {
+        window.location.href = "../PagCarrinho/pagCarrinho.html"
+    })
+
     $('#bOutraPg').click(function () {
         window.location.href = "PaginaCadastro.html";
     });
@@ -7,6 +11,7 @@ $(document).ready(function(){
         if (verificarTudo() == true) {
              if (acessar() == true) {
                 alert("Acesso permitido")
+                window.location.href = "../index.html"
              } else {
                 alert("Acesso negado")
              }

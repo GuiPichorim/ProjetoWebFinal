@@ -2,9 +2,10 @@ var banco = window.localStorage;
 var dados = JSON.parse(banco.getItem("lista_compras"));
 
 $(document).ready(function() {
-    if (dados == null) {
-        carrinhoVazio()
-    }
+    $("#bLogin").click(function() {
+        window.location.href = "../LoginCadastro/index.html"
+    })
+
     mostrarProdutos();
 });
 
@@ -30,6 +31,10 @@ function mostrarProdutos() {
         
         
         $(".produtos").append(conteudo)
+    }
+
+    if ($(".produtos").html().length == "") {
+        carrinhoVazio()
     }
 
     $(".btn-danger").click(function() {
