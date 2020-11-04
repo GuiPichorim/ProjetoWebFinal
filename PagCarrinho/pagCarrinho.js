@@ -1,5 +1,7 @@
 var banco = window.localStorage;
 var dados = JSON.parse(banco.getItem("lista_compras"));
+//var permissao = JSON.parse(banco.getItem("acessoPermitido")) // verificar acesso
+//var dadosUsuarios = JSON.parse(banco.getItem("dadosUsuarios"));
 
 $(document).ready(function() {
     $("#bLogin").click(function() {
@@ -38,7 +40,8 @@ function mostrarProdutos() {
     }
 
     $(".btn-danger").click(function() {
-        localStorage.clear()
+        //localStorage.clear()
+        localStorage.removeItem("lista_compras") //verificar
         var id = $(this).attr("id_bebida")
 
         dados[id].splice(4, 1, false)

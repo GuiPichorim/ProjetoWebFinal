@@ -11,6 +11,11 @@ $(document).ready(function(){
         if (verificarTudo() == true) {
              if (acessar() == true) {
                 alert("Acesso permitido")
+                // Começa
+                var acesso = true
+                var banco = window.localStorage;
+                banco.setItem("acessoPermitido", JSON.stringify(acesso));
+                // Termina
                 window.location.href = "../index.html"
              } else {
                 alert("Acesso negado")
@@ -51,16 +56,16 @@ function verificarTudo() {
 
 function acessar() {
     var banco = window.localStorage;
-    var dados = JSON.parse(banco.getItem("dadosUsuarios"));
+    var dadosUsuarios = JSON.parse(banco.getItem("dadosUsuarios"));
     var nome = $('#nome').val();
     var senha = $('#senha').val();
 
-    if (dados == null) {
+    if (dadosUsuarios == null) {
         return false
     }
 
-    for (var i = 0; i < dados.length; i++) {
-        if (dados[i][3] == nome && dados[i][4] == senha) {
+    for (var i = 0; i < dadosUsuarios.length; i++) {
+        if (dadosUsuarios[i][3] == nome && dadosUsuarios[i][4] == senha) {
             return true
         }
     }
