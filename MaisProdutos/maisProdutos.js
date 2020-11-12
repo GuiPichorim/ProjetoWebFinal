@@ -17,6 +17,8 @@ var array_carrinho = []
 var banco = window.localStorage;
 var dados = JSON.parse(banco.getItem("lista_compras")); //verificar
 var contador = 0 // verificar
+var permissao = JSON.parse(banco.getItem("acessoPermitido")) // verificar acesso
+//var dadosUsuario = JSON.parse(banco.getItem("dadosUsuarios"));
 
 
 $(document).ready(function() {
@@ -64,6 +66,29 @@ function mostrarProdutos() {
             }
         }
         */
+       // começa aqui
+       if (permissao == null) {
+           alert("É necessário fazer o login antes.")
+           window.location.href = "../LoginCadastro/index.html"
+       } else {
+            var id = $(this).attr("id_bebida")
+
+            array_produtos[id].splice(4, 1, true)
+
+            array_carrinho.push(array_produtos[id])
+            if (dados != null && contador < 1) {
+                contador = 1
+                for (var i = 0; i < dados.length; i++) {
+                    array_carrinho.push(dados[i]) // verificar
+                }
+            }
+
+            addCarrinhoLocalStorage()
+        
+            mostrarProdutos()
+       }
+       // termina aqui
+       /*
         var id = $(this).attr("id_bebida")
 
         array_produtos[id].splice(4, 1, true)
@@ -75,11 +100,13 @@ function mostrarProdutos() {
                 array_carrinho.push(dados[i]) // verificar
             }
         }
+        
 
 
         addCarrinhoLocalStorage()
         
         mostrarProdutos()
+        */
     })
 
 }
