@@ -9,8 +9,10 @@ var array_produtos = [['Absolut', 'Absolut.jpg', 'Vodka Absolut 1 Litro', "R$ 85
                     ["Heineken", "Heineken.jpg", "Cerveja Heineken P.Malte 330 Ml", "R$ 22,95 à vista", false],
                     ["Erdinger", "Erdinger.jpg", "Cerveja Erdinger Weissbier 500 Ml", "R$ 16,95 à vista", false],
                     ["Guinness", "Guinness.jpg", "Cerveja Guinness 440 Ml", "R$ 25,99 à vista", false],
-                    ["Skol Beats", "SkolBeats.jpg", "Skol Beats 313 Ml", "R$ 24,00 à vista", false]]
-                    // ADICIONAR MAIS BEBIDAS!!!
+                    ["Skol Beats", "SkolBeats.jpg", "Skol Beats 313 Ml", "R$ 24,00 à vista", false],
+                    ["Vinho Faro Rose", "FaroRoseSyrah.jpg", "Faro Rose Syrah 700ml", "R$ 49,90 à vista", false],
+                    ["Ciroc Red Berry", "CirocRedBerry.jpg", "Ciroc Red Berry 750ml", "R$ 125,90 à vista", false]]
+                    
              
 var array_carrinho = []
 
